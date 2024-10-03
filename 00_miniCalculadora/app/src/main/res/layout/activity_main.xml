@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Resultado"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:id="@+id/resultado"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.047"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.05"
+      />
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Numero1: "/>
+        <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:id="@+id/num1"
+        android:inputType="numberDecimal"
+        />
+        </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Numero2: "/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:id="@+id/num2"
+            android:inputType="numberDecimal"
+            />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/sumar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sumar" />
+
+    <Button
+        android:id="@+id/restar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Restar" />
+
+    <Button
+        android:id="@+id/multiplicar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Multiplicar" />
+
+    <Button
+        android:id="@+id/dividir"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Dividir" />
+
+    <Button
+        android:id="@+id/potencia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Potencia" />
+
+    <Button
+        android:id="@+id/borrar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Borrar Datos" />
+
+</LinearLayout>
