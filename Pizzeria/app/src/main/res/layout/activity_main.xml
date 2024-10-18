@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:background="#FF9800">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#FF004B"
+        android:text="Pizzeria Paco"
+        android:textAlignment="center"
+        android:textSize="22sp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:text="|-----------------------------------------------------------------|"
+        android:textAlignment="center"
+        android:textSize="22sp"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FF004B"
+            android:text="Pizza Pequeña: 5€ "
+            android:textAlignment="center"
+            android:textSize="12sp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FF004B"
+            android:text="Pizza Mediana: 10€ "
+            android:textAlignment="center"
+            android:textSize="12sp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FF004B"
+            android:text="Pizza Grande: 15€ "
+            android:textAlignment="center"
+            android:textSize="12sp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FF004B"
+            android:text="Peperoni 1€"
+            android:textAlignment="center"
+            android:textSize="12sp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FF004B"
+            android:text="Jamon 3€"
+            android:textAlignment="center"
+            android:textSize="12sp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FF004B"
+            android:text="Aceitunas 3€"
+            android:textAlignment="center"
+            android:textSize="12sp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FF004B"
+            android:text="Bacon 2€"
+            android:textAlignment="center"
+            android:textSize="12sp"
+            />
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:text="|-----------------------------------------------------------------|"
+        android:textAlignment="center"
+        android:textSize="22sp"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Introduzca el nombre:"
+            android:textAlignment="center"
+            android:textSize="15sp"/>
+        <EditText
+        android:id="@+id/Nombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName" />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Introduzca la direccion:"
+            android:textAlignment="center"
+            android:textSize="15sp"/>
+        <EditText
+            android:id="@+id/Direccion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:text="|-----------------------------------------------------------------|"
+            android:textAlignment="center"
+            android:textSize="22sp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tamaño Pizza"
+            android:textColor="#FF004B"
+            android:textAlignment="center"
+            android:textSize="20sp"/>
+        <RadioGroup android:id="@+id/rgGrupo1"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <RadioButton android:id="@+id/pequeña"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pequeña" />
+
+            <RadioButton android:id="@+id/mediana"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mediana" />
+            <RadioButton android:id="@+id/grande"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Grande" />
+
+        </RadioGroup>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:text="|-----------------------------------------------------------------|"
+            android:textAlignment="center"
+            android:textSize="22sp"
+            />
+    </LinearLayout>
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ingredientes Pizza"
+        android:textColor="#FF004B"
+        android:textAlignment="center"
+        android:textSize="20sp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <CheckBox android:id="@+id/peperoni"
+            android:layout_width="wrap_content"
+            android:textAlignment="center"
+            android:layout_height="wrap_content"
+            android:text="Peperoni"
+            android:checked="false" />
+        <CheckBox android:id="@+id/jamon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="Jamon"
+            android:checked="false" />
+        <CheckBox android:id="@+id/aceitunas"
+            android:layout_width="wrap_content"
+            android:textAlignment="center"
+            android:layout_height="wrap_content"
+            android:text="Aceitunas"
+            android:checked="false" />
+        <CheckBox android:id="@+id/bacon"
+            android:layout_width="wrap_content"
+            android:textAlignment="center"
+            android:layout_height="wrap_content"
+            android:text="Bacon"
+            android:checked="false" />
+    </LinearLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/calcular"
+        android:text="Calcular Precio"/>
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textAlignment="center"
+    android:textSize="20sp"
+    android:text="Total: "
+    android:id="@+id/resultado"
+    />
+</LinearLayout>
