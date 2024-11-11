@@ -13,7 +13,7 @@
         android:layout_width="310dp"
         android:layout_height="74dp"
         android:gravity="end"
-        android:text="2,520"
+        android:text="0"
         android:textColor="#000"
         android:textSize="48sp"
 
