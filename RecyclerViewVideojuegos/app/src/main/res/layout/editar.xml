@@ -9,25 +9,25 @@
     <EditText
         android:id="@+id/edtNombre"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Nombre"/>
+        android:layout_height="61dp"
+        android:hint="Nombre" />
+
 
     <EditText
         android:id="@+id/edtFecha"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Fecha de Creacion"/>
+        android:layout_height="61dp"
+        android:hint="Fecha de Creacion" />
 
     <EditText
         android:id="@+id/edtPuntuacion"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Puntuacion"/>
-
+        android:layout_height="61dp"
+        android:hint="Puntuacion" />
 
     <Button
         android:id="@+id/guardar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="61dp"
         android:text="Guardar" />
 </LinearLayout>

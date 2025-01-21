@@ -18,6 +18,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerViewUser;
     private AdaptadorVideoJuego adaptadorVideoJuego;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,12 +27,9 @@ public class MainActivity extends AppCompatActivity {
 
         recyclerViewUser = findViewById(R.id.rViewVideoJuego);
         recyclerViewUser.setHasFixedSize(true);
-
         recyclerViewUser.setLayoutManager(
-                new LinearLayoutManager(
-                        this,
-                        LinearLayoutManager.HORIZONTAL,
-                        false));
+                new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+        );
 
         ListaVideoJuegosSingelton.getInstance().inicializar();
         List<VideoJuego> listaVideoJuegos = ListaVideoJuegosSingelton.getInstance().getListaVideoJuegos();
@@ -39,12 +37,15 @@ public class MainActivity extends AppCompatActivity {
         recyclerViewUser.setAdapter(adaptadorVideoJuego);
 
         Button añadir = findViewById(R.id.añadir);
-
-        añadir.setOnClickListener(view ->{
+        añadir.setOnClickListener(view -> {
             Intent intent = new Intent(MainActivity.this, editar.class);
             startActivity(intent);
         });
+    }
 
-
+    @Override
+    protected void onResume() {
+        super.onResume();
+        adaptadorVideoJuego.notifyDataSetChanged();
     }
 }

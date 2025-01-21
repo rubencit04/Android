@@ -23,6 +23,23 @@ public class ListaVideoJuegosSingelton {
         return instance;
     }
 
+    public VideoJuego getVideoJuegoById(int id) {
+        for (VideoJuego vj : listaVideoJuegos) {
+            if (vj.getId() == id) {
+                return vj;
+            }
+        }
+        return null;
+    }
+
+    public void agregar(VideoJuego videojuego) {
+        if (listaVideoJuegos != null) {
+            videojuego.setId(contador);
+            contador++;
+            listaVideoJuegos.add(videojuego);
+        }
+    }
+
     public void inicializar(){
         listaVideoJuegos = new ArrayList<>();
         VideoJuego videoJuego = new VideoJuego();

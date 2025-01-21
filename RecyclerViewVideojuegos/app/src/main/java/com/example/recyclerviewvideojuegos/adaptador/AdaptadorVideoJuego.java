@@ -1,5 +1,6 @@
 package com.example.recyclerviewvideojuegos.adaptador;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,7 +11,9 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.recyclerviewvideojuegos.MainActivity;
 import com.example.recyclerviewvideojuegos.R;
+import com.example.recyclerviewvideojuegos.editar;
 import com.example.recyclerviewvideojuegos.entidad.VideoJuego;
 import com.example.recyclerviewvideojuegos.singelton.ListaVideoJuegosSingelton;
 
@@ -61,13 +64,18 @@ public class AdaptadorVideoJuego  extends RecyclerView.Adapter<AdaptadorVideoJue
 
         holder.botonEditar.setOnClickListener(view -> {
             Toast.makeText(holder.id.getContext(), "Editando VideJuego " + sId, Toast.LENGTH_SHORT).show();
-
+            Intent intent = new Intent(holder.id.getContext(), editar.class);
+            intent.putExtra("videojuego_id", listaVideoJuegos.get(position).getId());
+            intent.putExtra("videojuego_nombre", listaVideoJuegos.get(position).getNombre());
+            intent.putExtra("videojuego_fecha", listaVideoJuegos.get(position).getFechaCreacion());
+            intent.putExtra("videojuego_puntuacion", listaVideoJuegos.get(position).getPuntuacion());
+            holder.id.getContext().startActivity(intent);
         });
 
         holder.botonEliminar.setOnClickListener(view -> {
             Toast.makeText(holder.id.getContext(), "Eliminando VideJuego " + sId, Toast.LENGTH_SHORT).show();
             ListaVideoJuegosSingelton.getInstance().borrar(listaVideoJuegos.get(position));
-            notifyDataSetChanged();//Siempre notificamos cuando cambiamos los datos de una lista
+            notifyDataSetChanged();
         });
     }
 
